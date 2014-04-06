@@ -8,11 +8,11 @@
   "author": "Po-Ying Chen <poying.me@gmail.com> (陳柏穎)",
   "license": "MIT",
   "dependencies": {
-    "rrs": "0.0.4",
+    "rrs": "~0.0.4",
     "co": "~3.0.5",
     "bluebird": "~1.2.1",
     "mkdirp": "~0.3.5",
-    "thunkify": "0.0.1",
+    "thunkify": "~0.0.1",
     "rimraf": "~2.2.6",
     "koa-compose": "~2.2.0",
     "marked": "~0.3.2",
