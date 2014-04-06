@@ -1,0 +1,28 @@
+{
+  "name": "giik",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --harmony ./test"
+  },
+  "author": "Po-Ying Chen <poying.me@gmail.com> (陳柏穎)",
+  "license": "MIT",
+  "dependencies": {
+    "rrs": "0.0.4",
+    "co": "~3.0.5",
+    "bluebird": "~1.2.1",
+    "mkdirp": "~0.3.5",
+    "thunkify": "0.0.1",
+    "rimraf": "~2.2.6",
+    "koa-compose": "~2.2.0",
+    "marked": "~0.3.2",
+    "pretty-hrtime": "~0.2.1",
+    "chalk": "~0.4.0",
+    "nopt": "~2.2.0"
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "mocha": "~1.18.2"
+  }
+}
