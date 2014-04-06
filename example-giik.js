@@ -1,6 +1,5 @@
 'use strict';
 
-var path = require('path');
 var pygmentize = require('pygmentize-bundled');
 
 module.exports = function (giik) {
@@ -15,6 +14,7 @@ module.exports = function (giik) {
     }
   }));
 
-  giik.use(giik.jadeTemplate(path.join(__dirname, 'template')));
+  giik.use(giik.jadeTemplate('./template'));
+  giik.use(giik.copy(['./static']));
 
 };
