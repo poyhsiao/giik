@@ -24,11 +24,12 @@ $ cd book
 
 可參考 [example-giik.js](./example-giik.js)
 
-內建三個 middleware 可使用
+內建四個 middleware 可使用
 
 1. markdown
 2. jadeTemplate - 使用前必須安 jade
 3. duration
+4. copy
 
 ### 3. 建立放置書籍容（markdown）的目錄
 
