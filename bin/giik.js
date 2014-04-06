@@ -28,11 +28,16 @@ var parsed = nopt(knownOpts, shortHands, process.argv, 2);
 
 console.log();
 
+if (parsed.argv.remain.length < 2) {
+  parsed.help = true;
+}
+
 if (parsed.help) {
   let help = ''
     + '  ' + pkg.name + '@' + pkg.version + '\n\n'
+    + '  giik [options] [source] [output directory]\n\n'
     + '  Options:\n'
-    + '    --help, --no-color, --src=[path], --dest=[path], --config=[path]';
+    + '    --help, --no-color, --config=[path]';
 
   console.log(help);
   console.log();
@@ -40,13 +45,19 @@ if (parsed.help) {
   process.exit();
 }
 
-var giik = create(parsed.src, parsed.dest);
+var src = path.resolve('.', parsed.argv.remain[0]);
+var dest = path.resolve('.', parsed.argv.remain[1]);
+var giik = create(src, dest);
 
 parsed.config && (configFile = parsed.config);
 
-var wrapper = require(configFile);
+var wrapper;
 
-wrapper(giik);
+try {
+  wrapper = require(configFile);
+} catch (e) {}
+
+typeof wrapper === 'function' && wrapper(giik);
 
 giik.build(function (err) {
   if (err) {
