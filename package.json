@@ -43,5 +43,6 @@
   "bugs": {
     "url": "https://github.com/poying/giik/issues"
   },
-  "homepage": "https://github.com/poying/giik"
+  "homepage": "https://github.com/poying/giik",
+  "description": "A static site generator for book."
 }
