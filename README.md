@@ -50,7 +50,7 @@ $ mkdir 1-chapter-one
   "number": 1,
   "sections": [
     {
-      "name": "JavaScript 起源",
+      "name": "GIIIIIIIIK!",
       "authors": ["Po-Ying Chen <poying.me@gmail.com>"],
       "number": null,
       "source": "./test.md"
