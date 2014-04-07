@@ -3,6 +3,9 @@
 var pygmentize = require('pygmentize-bundled');
 
 module.exports = function (giik) {
+  giik.context = {
+    abc: 123
+  };
 
   giik.use(giik.duration());
 
