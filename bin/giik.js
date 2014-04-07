@@ -13,7 +13,8 @@ var knownOpts = {
   'src': String,
   'dest': String,
   'help': Boolean,
-  'no-color': Boolean
+  'no-color': Boolean,
+  'silent': Boolean
 };
 
 var shortHands = {
@@ -48,6 +49,9 @@ if (parsed.help) {
 var src = path.resolve('.', parsed.argv.remain[0]);
 var dest = path.resolve('.', parsed.argv.remain[1]);
 var giik = create(src, dest);
+
+giik.color = !parsed.color;
+giik.silent = !!parsed.silent;
 
 parsed.config && (configFile = parsed.config);
 
